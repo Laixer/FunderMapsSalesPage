@@ -27,3 +27,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### Bugs
 - Navigator link
 - FAQ, expand image. 
+- FAQ, Active Topic
