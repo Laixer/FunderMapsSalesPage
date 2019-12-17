@@ -2,9 +2,9 @@
   <div class="faq">
     <div class="faq-container">
       <div class="faq-menu">
-        <div class="fixed">
+        <div class="fixed" id="menulink">
           <div class="faq-menu-item" v-for="topic in topics" :key="topic.id">
-            <a href="#">
+            <a>
               <img src="@/assets/IconQuestionmark.svg" class="faq-icon" />
               <div class="menu">
                 <h3 class="menu-title">{{topic.title}}</h3>
@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="faq-item">
-        <div class="faq-item-container" id="item-1" v-for="topic in topics" :key="topic.id">
+        <div class="faq-item-container" id v-for="topic in topics" :key="topic.id">
           <img src="@/assets/IconQuestionmark.svg" class="faq-icon" />
           <div class="info">
             <h2 class="info-title">{{topic.title}}</h2>
@@ -117,6 +117,16 @@ $("document").ready(function() {
         .attr("src", "img/IconPlus.svg");
     }
   });
+
+  // var activate = document.getElementById("menulink");
+  // var alink = activate.getElementsByClassName("faq-menu-item");
+  // for (var i = 0; i < alink.length; i++) {
+  //   alink[i].addEventListener("click", function() {
+  //     var current = document.getElementsByClassName("active");
+  //     current[0].className = current[0].className.replace(" active", "");
+  //     this.className += " active";
+  //   });
+  // }
 });
 </script>
 

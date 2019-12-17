@@ -2,10 +2,10 @@
   <div class="theheading container">
     <h1>Lorem ipsum dolor sit amet.</h1>
     <p>Lorem ipsum dolor sit amet consectet.</p>
-    <div class="cta">
+    <!-- <div class="cta">
       <button type="button" class="button-filled">Lees meer</button>
       <button type="button" class="button-borderd">Contact</button>
-    </div>
+    </div>-->
     <img src="@/assets/ImageHeader.svg" alt />
   </div>
 </template>

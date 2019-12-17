@@ -21,10 +21,10 @@
         <h2 class="footer-title">MENU</h2>
         <div class="footer-info footer-info-menu">
           <a href="#main">Home</a>
-          <a href="#info">Information</a>
+          <a href="#infomenu">Information</a>
           <router-link to="/faq" class="link">FAQ</router-link>
 
-          <a href="#contact">Contact</a>
+          <a href="#contactinfo">Contact</a>
         </div>
       </div>
       <!-- Footer | Links -->

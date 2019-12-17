@@ -5,9 +5,9 @@
     </router-link>
     <div class="nav-link">
       <router-link to="/" class="link">Home</router-link>
-      <a href="#info" class="link">Informatie</a>
+      <a href="#infomenu" class="link">Informatie</a>
       <router-link to="/faq" class="link">FAQ</router-link>
-      <router-link to="/" class="link">Contact</router-link>
+      <a href="#contactinfo" class="link">Contact</a>
     </div>
   </div>
 </template>
