@@ -5,28 +5,28 @@
       <p class="subtitle">Lorem ipsum dolor sit amet consectet.</p>
       <div class="icon">
         <div class="icon-container">
-          <a href="#3dModel">
+          <a href="#gevelScan">
             <div class="icon-box">
               <img src="@/assets/Icon3D.svg" alt />
             </div>
-            <p class="icon-text">3D Modeling</p>
+            <p class="icon-text">Gevelscan</p>
           </a>
         </div>
 
         <div class="icon-container">
-          <a href="#gevalScan">
+          <a href="#scheurHerkenning">
             <div class="icon-box">
               <img src="@/assets/IconHouse.svg" alt />
             </div>
-            <p class="icon-text">Geval Scan</p>
+            <p class="icon-text">Scheurherkenning</p>
           </a>
         </div>
         <div class="icon-container">
-          <a href="#database">
+          <a href="#applicatie">
             <div class="icon-box">
               <img src="@/assets/IconFile.svg" alt />
             </div>
-            <p class="icon-text">Database</p>
+            <p class="icon-text">Applicatie</p>
           </a>
         </div>
         <a href="#infomap">
@@ -34,7 +34,7 @@
             <div class="icon-box">
               <img src="@/assets/IconGlobe.svg" alt />
             </div>
-            <p class="icon-text">Live Map</p>
+            <p class="icon-text">Kaartviewer</p>
           </div>
         </a>
       </div>

@@ -6,13 +6,13 @@
         <hr />
         <h2 class="footer-title">Contact Us</h2>
         <div class="footer-info">
-          <p>Straatnaam 52</p>
-          <p>3241 RT</p>
-          <p>Delft, The Netherlands</p>
+          <p>Fundermaps</p>
+          <p>Electronicaweg 25</p>
+          <p>2628 XG Delft</p>
+          <p>info@fundermaps.com</p>
           <br />
 
-          <p>PHONE: 06 12345678</p>
-          <p>E-MAIL: info@fundermaps.nl</p>
+          <p>FunderMaps is een product van het <a class="link-deco" href="http://kcaf.nl/">KCAF</a></p>
         </div>
       </div>
       <!-- Footer | MENU  -->
@@ -33,20 +33,32 @@
         <h2 class="footer-title">Connect With Us</h2>
         <div class="footer-info footer-social">
           <div class="footer-social-item">
-            <div class="footer-social-icon"></div>
-            <a href="#" class="footer-link">Facebook</a>
+            <a class="item-link" :href="link[0]" target="_blank">
+            <div class="footer-social-icon"><img src="@/assets/LogoLinkedIn.svg" alt="" class="footer-logo"></div>
+            <p class="footer-link">LinkedIn</p>
+            <p class="company">/fundermaps</p>
+            </a>
           </div>
           <div class="footer-social-item">
-            <div class="footer-social-icon"></div>
-            <a href="#" class="footer-link">Instagram</a>
+            <a class="item-link" :href="link[1]" target="_blank">
+            <div class="footer-social-icon"><img src="@/assets/LogoTwitter.svg" alt="" class="footer-logo"></div>
+            <p class="footer-link"> Twitter</p>
+                        <p class="company">/fundermaps</p>
+            </a>
           </div>
           <div class="footer-social-item">
-            <div class="footer-social-icon"></div>
-            <a href="#" class="footer-link">Twitter</a>
+            <a class="item-link" :href="link[2]" target="_blank">
+            <div class="footer-social-icon"><img src="@/assets/LogoLinkedIn.svg" alt="" class="footer-logo"></div>
+            <p class="footer-link">LinkedIn</p>
+                                    <p class="company">/kcaf</p>
+            </a>
           </div>
           <div class="footer-social-item">
-            <div class="footer-social-icon"></div>
-            <a href="#" class="footer-link">LinkedIn</a>
+            <a class="item-link" :href="link[3]" target="_blank">
+            <div class="footer-social-icon"><img src="@/assets/LogoTwitter.svg" alt="" class="footer-logo"></div>
+            <p class="footer-link">Twitter</p>
+                                    <p class="company">/kcaf</p>
+                                    </a>
           </div>
         </div>
       </div>
@@ -66,11 +78,31 @@
 
 <script>
 export default {
-  name: "TheFooter"
+  name: "TheFooter",
+  data() {
+    return { 
+      link: [
+        "https://www.linkedin.com/company/fundermaps",
+        "https://twitter.com/funderingskaart",
+        
+        "https://www.linkedin.com/company/kcaf/",
+        "https://twitter.com/funderingsloket"
+
+
+    ]
+
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
+.footer-logo {
+  color: white;
+  max-width: 60%;
+  align-self: center;
+  margin: auto;
+}
 footer {
   margin: auto;
   width: 80%;
@@ -131,12 +163,15 @@ footer {
     }
   }
 
-  .footer-social-item {
+  .footer-social-item, .item-link  {
+    cursor: pointer;
+    text-decoration: none;
     flex: 1 0 40%;
     flex-wrap: wrap;
     display: flex;
     align-items: center;
     margin: 5px;
+    text-align: center;
 
     @media (min-width: 901px) {
       flex: 1 0 20%;
@@ -144,6 +179,7 @@ footer {
       display: grid;
     }
   }
+  
 
   .footer-social-icon {
     width: 50px;
@@ -159,7 +195,7 @@ footer {
 
   .footer-link {
     text-decoration: none;
-    color: #17a4ea;
+    color: black;
     font-weight: 600;
     margin-left: 10px;
 
@@ -183,7 +219,7 @@ footer {
   span.link {
     a {
       text-decoration: none;
-      color: #17a4ea;
+      color: black;
       font-weight: 800;
       transition: 0.2s;
       cursor: pointer;
@@ -192,6 +228,20 @@ footer {
         color: #1a1d39;
       }
     }
+  }
+}
+.company {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #17a4ea;
+}
+.link-deco {
+  color: #17a4ea;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+  color: darken($color: #17a4ea, $amount: 20)
   }
 }
 </style>

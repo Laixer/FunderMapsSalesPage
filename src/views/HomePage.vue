@@ -32,7 +32,6 @@ import ContactInfo from "@/components/HomeFolder/ContactInfo";
 import TheFooter from "@/components/HomeFolder/TheFooter";
 
 // @ Jquery Import $
-import $ from "jquery";
 
 export default {
   name: "HomePage",
@@ -44,21 +43,8 @@ export default {
     TheTestimonials,
     ContactInfo,
     TheFooter
-  },
-  mounted: function() {
-    $('a[href*="#"]').on("click", function(e) {
-      e.preventDefault();
-      $("html, body").animate(
-        {
-          scrollTop: $($(this).attr("href")).offset().top
-        },
-        600,
-        "linear"
-      );
-    });
   }
 
-  // SCROLL On ahref ID
 };
 </script>
 <style lang="scss" scoped>

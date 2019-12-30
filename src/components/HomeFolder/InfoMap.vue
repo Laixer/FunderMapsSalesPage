@@ -1,9 +1,8 @@
 <template>
   <div id="infomap">
-    <h1 class="map-text">Lorem ipsum dolor sit amet</h1>
+    <h1 class="map-text">Kaartviewer </h1>
     <p class="map-subtext">
-      Vestibulum ac bibendum purus. Praesent aliquam nunc libero, ut
-      pellentesque quam congue at.
+      Met de data van funderingen wordt de analyses naar funderingsrisicogebieden uitgevoerd. Beschikbare data hiervoor zijn oa. funderingstype en  pandzakkingssnelheid. Analyses obv grondwaterstand als droogstaand en subjectieve beoordelingen als handhavingstermijnen worden tevens gebruikt. Op deze wijze wordt op blok of wijkniveau een risico bepaald op funderingsschade.
     </p>
     <img src="@/assets/ImageMap.jpg" alt class="map" />
   </div>
@@ -19,6 +18,11 @@ export default {
 #infomap {
   text-align: center;
 
+
+  .map {
+    width: 100vw;
+    margin-top: 30px;
+    
   &-text {
     font-size: 2.5rem;
     font-weight: bold;
@@ -27,13 +31,9 @@ export default {
   &-subtext {
     font-style: italic;
     font-size: 1.3rem;
-    max-width: 40%;
+    max-width: 70%;
     margin: auto;
   }
-
-  .map {
-    width: 100vw;
-    margin-top: 30px;
   }
 }
 </style>

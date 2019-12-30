@@ -24,7 +24,7 @@
             <div class="item" v-for="questions in topic.question" :key="questions.id">
               <h3 class="item-text">
                 {{questions.title}}
-                <img src="@/assets/IconPlus.svg" class="plus" />
+                <img v-bind:src="getIcon"  v-on:click="makeCollapsed"  :key="questions.id" />
               </h3>
               <ul class="expand-info" style="display: none;">
                 <li class="item-info">{{questions.text}}</li>
@@ -42,6 +42,8 @@ export default {
   name: "FaqItems",
   data() {
     return {
+      isCollapsed: false,
+      hideText: true,
       topics: [
         {
           id: 1,
@@ -50,12 +52,14 @@ export default {
           question: [
             {
               id: 1,
+
               title: "Hi",
               text:
                 "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum fuga, quos maiores quas ipsa illo et assumenda eveniet, laborum aperiam nam ullam, ea deserunt. Provident voluptate at dolorem veritatis nisi"
             },
             {
               id: 2,
+
               title: "Hsdai",
               text:
                 "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum fuga, quos maiores quas ipsa illo et assumenda eveniet, laborum aperiam nam ullam, ea deserunt. Provident voluptate at dolorem veritatis nisi"
@@ -69,6 +73,7 @@ export default {
           question: [
             {
               id: 1,
+
               title: "Hdsadasi",
               text:
                 "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum fuga, quos maiores quas ipsa illo et assumenda eveniet, laborum aperiam nam ullam, ea deserunt. Provident voluptate at dolorem veritatis nisi"
@@ -83,51 +88,23 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    getIcon() {
+      return require(this.isCollapsed
+        ? "@/assets/IconMinus.svg"
+        : "@/assets/IconPlus.svg");
+    }
+  },
+  methods: {
+    changeImage(index) {
+      return "../assets/" + this.pics[index] + ".svg";
+    },
+    // makeCollapsed: function(){
+    //   this.isCollapsed = !this.isCollapsed;
+    // }
   }
 };
-import $ from "jquery";
-
-$("document").ready(function() {
-  // FAQ EXPAND FUNCTION
-  $(".plus").click(function() {
-    if (
-      $(this)
-        .closest("h3")
-        .next(".expand-info")
-        .is(":hidden")
-    ) {
-      $(this)
-        .closest("h3")
-        .next(".expand-info")
-        .slideDown("fast")
-        .siblings(".expand-info")
-        .slideUp("slow");
-      $(this)
-        .closest("img")
-        .attr("src", "img/IconMinus.svg");
-    } else {
-      $(this)
-        .closest("h3")
-        .next(".expand-info")
-        .slideUp("fast")
-        .siblings(".expand-info")
-        .slideDown("slow");
-      $(this)
-        .closest("img")
-        .attr("src", "img/IconPlus.svg");
-    }
-  });
-
-  // var activate = document.getElementById("menulink");
-  // var alink = activate.getElementsByClassName("faq-menu-item");
-  // for (var i = 0; i < alink.length; i++) {
-  //   alink[i].addEventListener("click", function() {
-  //     var current = document.getElementsByClassName("active");
-  //     current[0].className = current[0].className.replace(" active", "");
-  //     this.className += " active";
-  //   });
-  // }
-});
 </script>
 
 <style lang="scss" scoped>

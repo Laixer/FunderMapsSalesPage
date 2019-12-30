@@ -2,14 +2,11 @@
   <div class="infotext">
     <h1>Duis tincidunt scelerisque nunc in vestibulum?</h1>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis
-      purus id ex mollis aliquet. Proin rhoncus lobortis tempor. Suspendisse
-      potenti.
+     De inschatting is dat circa 400.000 woningen in Nederland met funderingsproblemen te maken hebben of kunnen krijgen. Dit is geen hard aantal, maar een globale inschatting op basis van de risicogebieden in Nederland. Funderingen zijn immers niet zichtbaar en bovendien zijn er veranderende omgevingsfactoren als het klimaat en bodemdaling die invloed hebben op de staat van de funderingen.
     </p>
     <br />
     <p>
-      Nunc diam tellus, ullamcorper ut sapien vitae, gravida malesuada
-      neque. Phasellus placerat nisl neque, quis blandit eros aliquet ac.
+      Op lokaal of gemeente niveau kunnen deze vragen beantwoord worden en kan een meer gedetailleerd risico geduid worden door gebruik te maken van lokale data en bij de gemeente beschikbare gegevens. De FunderMaps is een hiervoor door het Kennis Centrum Aanpak Funderingsproblematiek (KCAF) ontwikkelde applicatie die helpt data te verwerken, te analyseren en presenteren. Met de speciaal ontwikkelde methodiek is het mogelijk zelf eenvoudig nieuwe gegevens toe te voegen of analyses uit te voeren. Op basis van landelijk beschikbare data, aangevuld met lokale data kunnen een serie analyses worden uitgevoerd die inzichtelijk maken waar oa. funderingsrisicogebieden binnen een gemeente aanwezig zijn.
     </p>
   </div>
 </template>
