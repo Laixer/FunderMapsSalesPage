@@ -1,4 +1,6 @@
-# vuejs-fundermaps
+![Azure Static Web Apps CI/CD](https://github.com/Laixer/FunderMapsSalesPage/workflows/Azure%20Static%20Web%20Apps%20CI/CD/badge.svg)
+
+# FunderMaps Sales Page
 
 ## Project setup
 ```
