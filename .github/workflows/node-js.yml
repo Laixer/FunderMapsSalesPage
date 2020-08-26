@@ -11,7 +11,7 @@ on:
 
 env:
   NODEJS_VERSION: '14.x'
-  WEBROOT: /var/www/laixer-sales-page
+  WEBROOT: /var/www/fundermaps-sales-page
 
 jobs:
   build:
