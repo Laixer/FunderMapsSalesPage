@@ -76,7 +76,7 @@
     </div>
 
     <div class="copyright">
-      <span>©{{new Date().getFullYear}} KCAF & Laixer</span>
+      <span>©{{new Date().getFullYear()}} KCAF & Laixer</span>
       <span class="link">
         <a href="#">Privacy Policy</a>
       </span>
