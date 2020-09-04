@@ -9,15 +9,17 @@
   </div>
 </template>
 
-<script>
-import TestimonialsQuote from "@/components/HomeFolder/TestimonialsQuote";
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import TestimonialsQuote from '@/components/Home/TestimonialsQuote.vue';
 
-export default {
-  name: "TheTestimonials",
+@Component({
+  name: 'TheTestimonials',
   components: {
-    TestimonialsQuote
-  }
-};
+    TestimonialsQuote,
+  },
+})
+export default class TheTestimonials extends Vue { }
 </script>
 
 <style lang="scss" scoped>

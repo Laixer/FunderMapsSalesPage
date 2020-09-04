@@ -4,13 +4,16 @@
   </div>
 </template>
 
-<script>
-import error404 from "@/components/ErrorFolder/ErrorPage";
-export default {
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import error404 from '@/components/Error/ErrorPage.vue';
+
+@Component({
   components: {
-    error404
-  }
-};
+    error404,
+  },
+})
+export default class Page404 extends Vue { }
 </script>
 
 <style lang="scss" scoped>

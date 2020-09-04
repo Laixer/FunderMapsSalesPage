@@ -19,30 +19,38 @@
     </div>
   </div>
 </template>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
 
-<script>
-export default {
-  name: "ContactInfo",
-  data() {
-    return {
-      contact: [
-        {
-          id: 1,
-          title: "Lorem",
-          text: "Lorem Ipsum dolor"
-        },
-        {
-          id: 2,
-          title: "Lorem",
-          text: "Lorem Ipsum dolor"
-        },
-        { id: 3, title: "Lorem", text: "Lorem Ipsum dolor" }
-      ]
-    };
-  }
-};
+type Contact = {
+  id: number,
+  title: string,
+  text: string
+}
+
+@Component({
+  name: 'ContactInfo',
+})
+export default class ContactInfo extends Vue {
+  private contact: Array<Contact> = [
+    {
+      id: 1,
+      title: 'Lorem',
+      text: 'Lorem Ipsum dolor',
+    },
+    {
+      id: 2,
+      title: 'Lorem',
+      text: 'Lorem Ipsum dolor',
+    },
+    {
+      id: 3,
+      title: 'Lorem',
+      text: 'Lorem Ipsum dolor',
+    },
+  ]
+}
 </script>
-
 <style lang="scss" scoped>
 .contact-container {
   display: flex;

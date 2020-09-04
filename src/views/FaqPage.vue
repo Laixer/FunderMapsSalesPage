@@ -7,36 +7,39 @@
   </div>
 </template>
 
-<script>
-import FaqItems from "@/components/FaqFolder/FaqItems";
+<script lang='ts'>
+import FaqItems from '@/components/Faq/FaqItems.vue';
+import { Component, Vue } from 'vue-property-decorator';
 
-export default {
-  name: "FaqPage",
+type Faq = {
+  id: number,
+  title: string,
+  text: string
+}
 
+@Component({
+  name: 'FaqPage',
   components: {
-    FaqItems
+    FaqItems,
   },
-
-  data() {
-    return {
-      item: [
-        {
-          id: 1,
-          title: "Lorem ipsum",
-          text: "Nullam at nulla sapien. Integer vel nulla augue."
-        },
-        {
-          id: 2,
-          title: "Lorem Ipsum",
-          text: "Nullam at nulla sapien. Integer vel nulla augue."
-        }
-      ]
-    };
-  }
-};
+})
+export default class FaqPage extends Vue {
+  private data: Array<Faq> = [
+    {
+      id: 1,
+      title: 'Lorem ipsum',
+      text: 'Nullam at nulla sapien. Integer vel nulla augue.',
+    },
+    {
+      id: 2,
+      title: 'Lorem Ipsum',
+      text: 'Nullam at nulla sapien. Integer vel nulla augue.',
+    },
+  ];
+}
 </script>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 .title {
   font-weight: 500;
   margin: 30px;

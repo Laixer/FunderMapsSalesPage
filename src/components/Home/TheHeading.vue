@@ -1,17 +1,22 @@
 <template>
   <div class="theheading container">
-    <h1>Lorem ipsum dolor sit amet.</h1>
-    <p>Lorem ipsum dolor sit amet consectet.</p>
+    <img alt="Fundermaps logo" src="@/assets/images/logo.png" class="logo" />
+    <p>Asset Management Tool voor funderingen</p>
     <!-- <div class="cta">
       <button type="button" class="button-filled">Lees meer</button>
       <button type="button" class="button-borderd">Contact</button>
     </div>-->
-    <img src="@/assets/ImageHeader.svg" alt />
+    <img src="@/assets/images/ImageHeader.svg" alt />
   </div>
 </template>
 
-<script>
-export default {};
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component({
+  name: 'heading',
+})
+export default class TheHeading extends Vue { }
 </script>
 
 <style lang="scss" scoped>
@@ -41,7 +46,6 @@ export default {};
   }
 
   p {
-    font-style: italic;
     font-size: 1.2rem;
 
     @media (max-width: 600px) {
@@ -49,9 +53,16 @@ export default {};
     }
   }
 
+  .logo {
+    margin-top: 50px;
+    width: 50%;
+    padding: 0px;
+  }
+
   img {
     width: 70%;
     margin: auto;
+    padding: 20px;
   }
 
   .cta {

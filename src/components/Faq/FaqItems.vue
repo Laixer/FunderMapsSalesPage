@@ -5,7 +5,7 @@
         <div class="fixed" id="menulink">
           <div class="faq-menu-item" v-for="topic in topics" :key="topic.id">
             <a>
-              <img src="@/assets/IconQuestionmark.svg" class="faq-icon" />
+              <img src="@/assets/images/IconQuestionmark.svg" class="faq-icon" />
               <div class="menu">
                 <h3 class="menu-title">{{topic.title}}</h3>
                 <p class="menu-desc">{{topic.desc}}</p>
@@ -16,18 +16,22 @@
       </div>
       <div class="faq-item">
         <div class="faq-item-container" id v-for="topic in topics" :key="topic.id">
-          <img src="@/assets/IconQuestionmark.svg" class="faq-icon" />
+          <img src="@/assets/images/IconQuestionmark.svg" class="faq-icon" />
           <div class="info">
             <h2 class="info-title">{{topic.title}}</h2>
             <p class="info-text">{{topic.desc}}</p>
 
-            <div class="item" v-for="questions in topic.question" :key="questions.id">
+            <div class="item" v-for="question in topic.questions" :key="question.id">
               <h3 class="item-text">
-                {{questions.title}}
-                <img v-bind:src="getIcon"  v-on:click="makeCollapsed"  :key="questions.id" />
+                {{question.title}}
+                <img
+                  v-bind:src="getIcon"
+                  v-on:click="makeCollapsed"
+                  :key="question.id"
+                />
               </h3>
               <ul class="expand-info" style="display: none;">
-                <li class="item-info">{{questions.text}}</li>
+                <li class="item-info">{{question.text}}</li>
               </ul>
             </div>
           </div>
@@ -37,74 +41,84 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "FaqItems",
-  data() {
-    return {
-      isCollapsed: false,
-      hideText: true,
-      topics: [
+<script lang="ts">
+
+import { Component, Vue } from 'vue-property-decorator';
+
+const loremIpsum: string = 'Lorem ipsum dolor sit amet consectetur, '
+  + 'adipisicing elit. Cum fuga, quos maiores quas ipsa illo et assumenda eveniet, '
+  + 'laborum aperiam nam ullam, ea deserunt. Provident voluptate at dolorem veritatis nisi';
+
+type Question = {
+  id: number,
+  title: string,
+  text: string
+}
+
+type Topic = {
+  id: number
+  title: string,
+  desc: string,
+  questions: Array<Question>
+}
+
+@Component({
+  name: 'FaqItems',
+})
+export default class FaqItems extends Vue {
+  private isCollapsed = false
+
+  private hideText = true
+
+  private topics: Array<Topic> = [
+    {
+      id: 1,
+      title: 'Lorem ipsum',
+      desc: 'Nullam at nulla sapien. Integer vel nulla augue.',
+      questions: [
         {
           id: 1,
-          title: "Lorem ipsum",
-          desc: "Nullam at nulla sapien. Integer vel nulla augue.",
-          question: [
-            {
-              id: 1,
-
-              title: "Hi",
-              text:
-                "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum fuga, quos maiores quas ipsa illo et assumenda eveniet, laborum aperiam nam ullam, ea deserunt. Provident voluptate at dolorem veritatis nisi"
-            },
-            {
-              id: 2,
-
-              title: "Hsdai",
-              text:
-                "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum fuga, quos maiores quas ipsa illo et assumenda eveniet, laborum aperiam nam ullam, ea deserunt. Provident voluptate at dolorem veritatis nisi"
-            }
-          ]
+          title: 'Hi',
+          text: loremIpsum,
         },
         {
           id: 2,
-          title: "Lorem Ipsum",
-          desc: "Nullam at nulla sapien. Integer vel nulla augue.",
-          question: [
-            {
-              id: 1,
-
-              title: "Hdsadasi",
-              text:
-                "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum fuga, quos maiores quas ipsa illo et assumenda eveniet, laborum aperiam nam ullam, ea deserunt. Provident voluptate at dolorem veritatis nisi"
-            },
-            {
-              id: 2,
-              title: "Hifsfsa",
-              text:
-                "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum fuga, quos maiores quas ipsa illo et assumenda eveniet, laborum aperiam nam ullam, ea deserunt. Provident voluptate at dolorem veritatis nisi"
-            }
-          ]
-        }
-      ]
-    };
-  },
-  computed: {
-    getIcon() {
-      return require(this.isCollapsed
-        ? "@/assets/IconMinus.svg"
-        : "@/assets/IconPlus.svg");
-    }
-  },
-  methods: {
-    changeImage(index) {
-      return "../assets/" + this.pics[index] + ".svg";
+          title: 'Hsdai',
+          text: loremIpsum,
+        },
+      ],
     },
-    // makeCollapsed: function(){
-    //   this.isCollapsed = !this.isCollapsed;
-    // }
+    {
+      id: 2,
+      title: 'Lorem Ipsum',
+      desc: 'Nullam at nulla sapien. Integer vel nulla augue.',
+      questions: [
+        {
+          id: 1,
+          title: 'Hdsadasi',
+          text: loremIpsum,
+        },
+        {
+          id: 2,
+          title: 'Hifsfsa',
+          text: loremIpsum,
+        },
+      ],
+    },
+  ]
+
+  get icon(): string {
+    return this.isCollapsed ? '@/assets/images/IconMinus.svg' : '@/assets/images/IconPlus.svg';
   }
-};
+
+  public changeImage(index: number): string {
+    return `../assets/${this.topics[index]}.svg`;
+  }
+
+  public makeCollapsed(): void {
+    this.isCollapsed = !this.isCollapsed;
+  }
+}
 </script>
 
 <style lang="scss" scoped>

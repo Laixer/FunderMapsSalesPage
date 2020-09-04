@@ -12,11 +12,14 @@
           <p>info@fundermaps.com</p>
           <br />
 
-          <p>FunderMaps is een product van het <a class="link-deco" href="http://kcaf.nl/">KCAF</a></p>
+          <p>
+            FunderMaps is een product van het
+            <a class="link-deco" href="http://kcaf.nl/">KCAF</a>
+          </p>
         </div>
       </div>
       <!-- Footer | MENU  -->
-      <div class="footer-item">
+      <!-- <div class="footer-item">
         <hr />
         <h2 class="footer-title">MENU</h2>
         <div class="footer-info footer-info-menu">
@@ -26,46 +29,54 @@
 
           <a href="#contactinfo">Contact</a>
         </div>
-      </div>
+      </div>-->
       <!-- Footer | Links -->
       <div class="footer-item">
         <hr />
         <h2 class="footer-title">Connect With Us</h2>
         <div class="footer-info footer-social">
           <div class="footer-social-item">
-            <a class="item-link" :href="link[0]" target="_blank">
-            <div class="footer-social-icon"><img src="@/assets/LogoLinkedIn.svg" alt="" class="footer-logo"></div>
-            <p class="footer-link">LinkedIn</p>
-            <p class="company">/fundermaps</p>
+            <a class="item-link" :href="links[0]" target="_blank">
+              <div class="footer-social-icon">
+                <img src="@/assets/images/LogoLinkedIn.svg" alt class="footer-logo" />
+              </div>
+              <p class="footer-link">LinkedIn</p>
+              <p class="company">/fundermaps</p>
             </a>
           </div>
           <div class="footer-social-item">
-            <a class="item-link" :href="link[1]" target="_blank">
-            <div class="footer-social-icon"><img src="@/assets/LogoTwitter.svg" alt="" class="footer-logo"></div>
-            <p class="footer-link"> Twitter</p>
-                        <p class="company">/fundermaps</p>
+            <a class="item-link" :href="links[1]" target="_blank">
+              <div class="footer-social-icon">
+                <img src="@/assets/images/LogoTwitter.svg" alt class="footer-logo" />
+              </div>
+              <p class="footer-link">Twitter</p>
+              <p class="company">/fundermaps</p>
             </a>
           </div>
           <div class="footer-social-item">
-            <a class="item-link" :href="link[2]" target="_blank">
-            <div class="footer-social-icon"><img src="@/assets/LogoLinkedIn.svg" alt="" class="footer-logo"></div>
-            <p class="footer-link">LinkedIn</p>
-                                    <p class="company">/kcaf</p>
+            <a class="item-link" :href="links[2]" target="_blank">
+              <div class="footer-social-icon">
+                <img src="@/assets/images/LogoLinkedIn.svg" alt class="footer-logo" />
+              </div>
+              <p class="footer-link">LinkedIn</p>
+              <p class="company">/kcaf</p>
             </a>
           </div>
           <div class="footer-social-item">
-            <a class="item-link" :href="link[3]" target="_blank">
-            <div class="footer-social-icon"><img src="@/assets/LogoTwitter.svg" alt="" class="footer-logo"></div>
-            <p class="footer-link">Twitter</p>
-                                    <p class="company">/kcaf</p>
-                                    </a>
+            <a class="item-link" :href="links[3]" target="_blank">
+              <div class="footer-social-icon">
+                <img src="@/assets/images/LogoTwitter.svg" alt class="footer-logo" />
+              </div>
+              <p class="footer-link">Twitter</p>
+              <p class="company">/kcaf</p>
+            </a>
           </div>
         </div>
       </div>
     </div>
 
     <div class="copyright">
-      <span>©2019 KCAF & Laixer</span>
+      <span>©{{new Date().getFullYear}} KCAF & Laixer</span>
       <span class="link">
         <a href="#">Privacy Policy</a>
       </span>
@@ -76,24 +87,21 @@
   </footer>
 </template>
 
-<script>
-export default {
-  name: "TheFooter",
-  data() {
-    return { 
-      link: [
-        "https://www.linkedin.com/company/fundermaps",
-        "https://twitter.com/funderingskaart",
-        
-        "https://www.linkedin.com/company/kcaf/",
-        "https://twitter.com/funderingsloket"
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
 
+@Component({
+  name: 'TheFooter',
+})
+export default class TheFooter extends Vue {
+  private links: Array<string> = [
+    'https://www.linkedin.com/company/fundermaps',
+    'https://twitter.com/funderingskaart',
 
-    ]
-
-    }
-  }
-};
+    'https://www.linkedin.com/company/kcaf/',
+    'https://twitter.com/funderingsloket',
+  ]
+}
 </script>
 
 <style lang="scss" scoped>
@@ -163,7 +171,8 @@ footer {
     }
   }
 
-  .footer-social-item, .item-link  {
+  .footer-social-item,
+  .item-link {
     cursor: pointer;
     text-decoration: none;
     flex: 1 0 40%;
@@ -179,7 +188,6 @@ footer {
       display: grid;
     }
   }
-  
 
   .footer-social-icon {
     width: 50px;
@@ -241,7 +249,7 @@ footer {
   text-decoration: none;
 
   &:hover {
-  color: darken($color: #17a4ea, $amount: 20)
+    color: darken($color: #17a4ea, $amount: 20);
   }
 }
 </style>

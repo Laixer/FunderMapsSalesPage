@@ -1,21 +1,24 @@
 <template>
   <div id="nav">
     <router-link to="/">
-      <img alt="Fundermaps logo" src="@/assets/logo.png" class="logo" />
+      <img alt="Fundermaps logo" src="@/assets/images/logo.png" class="logo" />
     </router-link>
-    <div class="nav-link">
+    <!-- <div class="nav-link">
       <router-link to="/" class="link">Home</router-link>
       <router-link to="/infoPage" class="link">Informatie</router-link>
       <router-link to="/faq" class="link">FAQ</router-link>
       <a to="/#contactinfo" class="link">Contact</a>
-    </div>
+    </div>-->
   </div>
 </template>
 
-<script>
-export default {
-  name: "TheNavbar"
-};
+<script lang='ts'>
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component({
+  name: 'TheNavbar',
+})
+export default class TheNavbar extends Vue { }
 </script>
 
 <style lang="scss" scoped>

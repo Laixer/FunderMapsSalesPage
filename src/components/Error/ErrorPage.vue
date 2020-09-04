@@ -6,7 +6,7 @@
         <p>Page not found</p>
       </div>
       <div class="image">
-        <img src="@/assets/ErrorSVG.svg" />
+        <img src="@/assets/images/ErrorSVG.svg" />
       </div>
     </div>
 
@@ -22,10 +22,13 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "error404"
-};
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component({
+  name: 'error404',
+})
+export default class ErrorPage extends Vue { }
 </script>
 
 <style lang="scss" scoped>
