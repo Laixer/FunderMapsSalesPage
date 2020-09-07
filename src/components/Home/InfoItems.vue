@@ -24,7 +24,7 @@
           />
           <div class="item-info">
             <h3 class="item-title">{{contentItem.title}}</h3>
-            <h5 class="item-subtitle">{{contentItem.subtitle}}</h5>
+            <h4 class="item-subtitle">{{contentItem.subtitle}}</h4>
             <p class="item-text">{{contentItem.text}}</p>
           </div>
         </template>

@@ -14,7 +14,11 @@
 
           <p>
             FunderMaps is een product van het
-            <a class="link-deco" href="http://kcaf.nl/">KCAF</a>
+            <a
+              class="link-deco"
+              href="https://kcaf.nl/"
+              rel="noreferrer noopener"
+            >KCAF</a>
           </p>
         </div>
       </div>
@@ -36,7 +40,7 @@
         <h2 class="footer-title">Connect With Us</h2>
         <div class="footer-info footer-social">
           <div class="footer-social-item">
-            <a class="item-link" :href="links[0]" target="_blank">
+            <a class="item-link" :href="links[0]" rel="noreferrer noopener" target="_blank">
               <div class="footer-social-icon">
                 <img src="@/assets/images/LogoLinkedIn.svg" alt class="footer-logo" />
               </div>
@@ -45,7 +49,7 @@
             </a>
           </div>
           <div class="footer-social-item">
-            <a class="item-link" :href="links[1]" target="_blank">
+            <a class="item-link" :href="links[1]" rel="noreferrer noopener" target="_blank">
               <div class="footer-social-icon">
                 <img src="@/assets/images/LogoTwitter.svg" alt class="footer-logo" />
               </div>
@@ -54,7 +58,7 @@
             </a>
           </div>
           <div class="footer-social-item">
-            <a class="item-link" :href="links[2]" target="_blank">
+            <a class="item-link" :href="links[2]" rel="noreferrer noopener" target="_blank">
               <div class="footer-social-icon">
                 <img src="@/assets/images/LogoLinkedIn.svg" alt class="footer-logo" />
               </div>
@@ -63,7 +67,7 @@
             </a>
           </div>
           <div class="footer-social-item">
-            <a class="item-link" :href="links[3]" target="_blank">
+            <a class="item-link" :href="links[3]" rel="noreferrer noopener" target="_blank">
               <div class="footer-social-icon">
                 <img src="@/assets/images/LogoTwitter.svg" alt class="footer-logo" />
               </div>
