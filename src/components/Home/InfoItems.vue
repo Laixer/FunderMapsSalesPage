@@ -8,10 +8,20 @@
             <h5 class="item-subtitle">{{contentItem.subtitle}}</h5>
             <p class="item-text">{{contentItem.text}}</p>
           </div>
-          <img v-bind:src="require(`@/assets/images/` + contentItem.img)" alt class="item-foto" />
+          <img
+            v-bind:src="require(`@/assets/images/` + contentItem.img)"
+            type="image/webp"
+            alt
+            class="item-foto"
+          />
         </template>
         <template v-else>
-          <img v-bind:src="require(`@/assets/images/` + contentItem.img)" alt class="item-foto" />
+          <img
+            v-bind:src="require(`@/assets/images/` + contentItem.img)"
+            type="image/webp"
+            alt
+            class="item-foto"
+          />
           <div class="item-info">
             <h3 class="item-title">{{contentItem.title}}</h3>
             <h5 class="item-subtitle">{{contentItem.subtitle}}</h5>
@@ -50,7 +60,7 @@ export default class InfoItems extends Vue {
         + 'De brondocumenten zijn tevens te uploaden.'
         + '\n\nHier is verder geen technische kennis noodzakelijk. '
         + 'Beschikbare data is door de FunderMaps als service als bulk te verwerken.',
-      img: 'ImageDatabase.png',
+      img: 'ImageDatabase.webp',
     },
     {
       title: 'Gevelscan',
@@ -59,7 +69,7 @@ export default class InfoItems extends Vue {
         + ' een probleemgebied nauwkeurig 3D ingemeten en kunnen nauwkeurige meerassige scheefstanden '
         + 'en lintvoegmetingen uit de data worden geëxtraheerd. '
         + '\n\nOok kan het 3D model worden opgenomen in het kaartmateriaal voor een 3D weergave.',
-      img: 'ImageGevelscan.png',
+      img: 'ImageGevelscan.webp',
     },
     {
       title: 'Scheurherkenning',
@@ -68,7 +78,7 @@ export default class InfoItems extends Vue {
         + 'FunderMaps kan deze tekenen automatisch detecteren en classificeren op basis van fotomateriaal. '
         + '\n\nHier worden getrainde machine learning modellen voor in gezet '
         + 'op bestaande data of op nieuw ingewonnen data. ',
-      img: 'Image3D.png',
+      img: 'Image3D.webp',
     },
 
   ]

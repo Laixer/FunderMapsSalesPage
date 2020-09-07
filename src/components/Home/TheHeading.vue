@@ -1,6 +1,6 @@
 <template>
   <div class="theheading container">
-    <img alt="Fundermaps logo" src="@/assets/images/logo.png" class="logo" />
+    <img alt="Fundermaps logo" src="@/assets/images/logo.webp" class="logo" />
     <p>Asset Management Tool voor funderingen</p>
     <!-- <div class="cta">
       <button type="button" class="button-filled">Lees meer</button>

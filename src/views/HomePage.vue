@@ -14,8 +14,8 @@ import TheHeading from '@/components/Home/TheHeading.vue';
 import InfoMenu from '@/components/Home/InfoMenu.vue';
 import InfoItems from '@/components/Home/InfoItems.vue';
 import InfoText from '@/components/Home/InfoText.vue';
-// import TheTestimonials from '@/components/Home/TestimonialsText.vue';
-// import ContactInfo from '@/components/Home/ContactInfo.vue';
+// import TheTestimonials from '@/components/Home/TestimonialsText';
+// import ContactInfo from '@/components/Home/ContactInfo';
 import TheFooter from '@/components/Home/TheFooter.vue';
 
 @Component({

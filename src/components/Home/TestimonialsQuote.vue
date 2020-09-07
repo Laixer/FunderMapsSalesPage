@@ -4,7 +4,7 @@
       <!-- Quote | Icon -->
       <img src="@/assets/images/IconQuote.svg" alt="quote-icon" class="quote-icon" />
       <img
-        src="@/assets/images/ImageGevalscan.png"
+        src="@/assets/images/ImageGevelscan.webp"
         alt
         class="quote-image"
         width="75px"

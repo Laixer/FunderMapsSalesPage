@@ -5,16 +5,14 @@
       Analyse resultaten, funderingstype en pandzakkingssnelheid
       worden op pandniveau gepresenteerd.
     </p>
-    <img src="@/assets/images/ImageMap.jpg" alt class="map" />
+    <img src="@/assets/images/ImageMap.webp" type="image/webp" alt class="map" />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
-@Component({
-  name: 'InfoMap',
-})
+@Component({})
 export default class InfoMap extends Vue { }
 </script>
 
