@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
     <router-link to="/">
-      <img alt="Fundermaps logo" src="@/assets/images/logo.webp" class="logo" />
+      <img alt="Fundermaps logo" src="@/assets/images/logo.svg" class="logo" />
     </router-link>
     <!-- <div class="nav-link">
       <router-link to="/" class="link">Home</router-link>
